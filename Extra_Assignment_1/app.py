@@ -50,7 +50,7 @@ how the Bias^2 and Variance change respectively.")
 # Slicer for Polynomial Degree
 min_degree = int(results_df['Degree'].min())
 max_degree = int(results_df['Degree'].max())
-st.subheader("Adjust the polynomial degree using the slider below.")
+st.subheader("We can adjust the polynomial degree using the slider below to observe how Bias^2 and Variance change with increasing complexity")
 degree_range = st.slider("Select Polynomial Degree Range", min_degree, max_degree, (min_degree, max_degree))
 
 # Filter data based on slider
@@ -82,10 +82,10 @@ plt.grid(True)
 # Show plot
 st.pyplot(fig)
 
-st.header("Data Description and methodology")
+st.header("Interpretation")
 
 st.text("The chart illustrates a well-known trade-off between model complexity, bias, and variance. \
-        Simpler models, with fewer features or lower polynomial degrees, tend to exhibit lower variance \
+        On average, simpler models, with fewer features or lower polynomial degrees, tend to exhibit lower variance \
          but higher bias. This means they are less sensitive to the noise in the data, but they might underfit \
          by failing to capture the underlying relationships. Conversely, more complex models—characterized by \
         higher polynomial degrees or the inclusion of more variables—generally show higher variance but lower bias. \
@@ -100,5 +100,5 @@ st.text("The chart illustrates a well-known trade-off between model complexity, 
 
 st.header("Disclaimer")
 
-st.text("LLM were used to take guidance on the process of running the simulations for different polynomial degrees while \
+st.text("LLMs were used to take guidance on the process of running the simulations for different polynomial degrees while \
          fitting the model. It was also leveraged to understand how to publish apps on streamlit. ")
