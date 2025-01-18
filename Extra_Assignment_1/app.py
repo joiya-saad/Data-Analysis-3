@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # Load the data (replace with your public link or file path)
 @st.cache_data
 def load_data():
-    url = "https://raw.githubusercontent.com/joiya-saad/Data-Analysis-3/refs/heads/main/Extra%20Assignment%201/Bias-Variance-Results.csv"  # Replace with your CSV link
+    url = "https://raw.githubusercontent.com/joiya-saad/Data-Analysis-3/refs/heads/main/Extra_Assignment_1/Bias-Variance-Results.csv"  # Replace with your CSV link
     return pd.read_csv(url)
 
 # Load data
